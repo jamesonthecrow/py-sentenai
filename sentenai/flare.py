@@ -236,7 +236,7 @@ class Cond(Flare):
             op = "in"
             val = self.val()
         elif isinstance(self.val, InCircle):
-            vt = "circle"
+           vt = "circle"
             op = "in"
             val = self.val()
         elif isinstance(self.val, date):
@@ -346,7 +346,8 @@ class Stream(object):
 
 @py2str
 class EventPath(object):
-    def __init__(self, namet=None):
+    def __init__(self, namet=None, stream=None):
+        self.__stream = stream
         if namet == None:
             self.__attrlist = tuple()
         else:
